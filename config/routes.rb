@@ -295,7 +295,7 @@ Rails.application.routes.draw do
   resources :airconditioners do
     collection do
       get 'search'
-    get :autocomplete
+      get :autocomplete
     end
   end  
 
