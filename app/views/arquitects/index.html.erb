@@ -22,7 +22,7 @@
      <% @arquitects.each do |arquitect| %>
       <div class="col-md-3">
       <div class="thumbnail">
-        <%= link_to image_tag(arquitect.image.url(:small)), arquitect %>
+        <%= link_to image_tag(arquitect.image.url(:medium)), arquitect %>
         <div class="caption">
           <h4><strong><%= arquitect.company_name %></strong></h4>
           <strong><th><%= label_tag :nil, t('servicecompanywebsite') %></th></strong><br>
