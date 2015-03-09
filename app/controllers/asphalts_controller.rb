@@ -2,9 +2,9 @@ class AsphaltsController < ApplicationController
   before_action :set_asphalt, only: [:show, :edit, :update, :destroy]
   
 
-def search
+  def search
     if params[:search].present?
-     @asphalts = Asphalt.search(params[:search])
+      @asphalts = Asphalt.search(params[:search])
     else
       @asphalts = Asphalt.all
     end

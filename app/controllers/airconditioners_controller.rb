@@ -8,6 +8,7 @@ class AirconditionersController < ApplicationController
       @airconditioners = Airconditioner.all
     end
   end
+  
   def autocomplete
     render json: Airconditioner.search(params[:query], fields:[{name: :text_start}], limit: 10).map(&:name)
   end
