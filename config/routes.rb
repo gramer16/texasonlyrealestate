@@ -266,12 +266,14 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :framings do
     collection do
       get 'search'
       get :autocomplete
     end
   end
+
 
   resources :drywalls do
       collection do
@@ -285,6 +287,8 @@ Rails.application.routes.draw do
   resources :subscriptionpackages do
     resources :orders
   end
+
+
   resources :asphalts do
     collection do
       get 'search'
@@ -292,12 +296,14 @@ Rails.application.routes.draw do
     end
   end
 
+
   resources :airconditioners do
     collection do
       get 'search'
       get :autocomplete
     end
   end  
+
 
   resources :services do
     collection do

@@ -9,7 +9,7 @@
     <%= t('searchservice_html') %>
    <%= form_tag search_asphalts_path, method: :get do %>
           <p>
-        <%= text_field :search, params[:search], placeholder: t('searchtextbox') class: "form-control" %>
+        <%= text_field :search, params[:search], placeholder: t('searchtextbox'), class: "form-control" %>
         <br>
          <%= submit_tag t('searchbtn'), name: nil ,class: "btn btn-success" %>
       </p>
