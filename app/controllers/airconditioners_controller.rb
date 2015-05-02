@@ -33,7 +33,6 @@ class AirconditionersController < ApplicationController
 
   def create
  @airconditioner = Airconditioner.new(airconditioner_params)
- @taxspecialist.user_id = current_user.id
     respond_to do |format|
       if @airconditioner.save
         format.html { redirect_to  @@airconditioner, notice: 'Service was successfully created.' }
