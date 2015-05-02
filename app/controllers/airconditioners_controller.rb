@@ -1,5 +1,6 @@
 class AirconditionersController < ApplicationController
   before_action :set_airconditioner, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, only: [:destroy, :edit]
 
   def search
     if params[:search].present?
@@ -72,5 +73,10 @@ class AirconditionersController < ApplicationController
     def airconditioner_params
       params.require(:airconditioner).permit(:company_name, :company_description, :address, :city, :zipcode, :contact_name, :company_website, :company_phone, :image)
     end
+    def check_user
+        unless current_user.admin?
+         redirect_to root_url, alert: "Sorry, Only Ontario's Only Admin can Delete a Subscription"
+    end
+  end
     
 end
