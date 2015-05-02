@@ -35,7 +35,7 @@ class AirconditionersController < ApplicationController
  @airconditioner = Airconditioner.new(airconditioner_params)
     respond_to do |format|
       if @airconditioner.save
-        format.html { redirect_to  @@airconditioner, notice: 'Service was successfully created.' }
+        format.html { redirect_to  @airconditioner, notice: 'Service was successfully created.' }
         format.json { render :show, status: :created, location:  @airconditioner }
       else
         format.html { render :new }
