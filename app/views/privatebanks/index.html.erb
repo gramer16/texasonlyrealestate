@@ -37,9 +37,10 @@
            <br>
            
            <td><%= link_to 'Show', privatebank, class: "btn btn-success" %></td>
-        
+        <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Edit', edit_privatebank_path(privatebank), class: "btn btn-success" %></td>
         <td><%= link_to 'Destroy', privatebank, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+        <% end %>
         </div>
       </div>
     </div>
